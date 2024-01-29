@@ -11,12 +11,12 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f8f9fa;
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #343a40;
+            color: #ffffff;
             text-align: center;
             padding: 1em;
         }
@@ -26,41 +26,38 @@
         }
 
         .link-box {
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 20px;
             text-align: center;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease-in-out;
-            position: relative;
-            overflow: hidden;
             margin-bottom: 20px;
         }
 
         .link-box:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
         }
 
-        .link-box:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #ffbf00, #ff0080);
-            transform: skew(-15deg);
-            z-index: -1;
-        }
-
-        a {
+        .link-box a {
             text-decoration: none;
             color: #333;
         }
 
-        h2, p {
-            margin: 0;
-            color: #333;
+        .link-box h2 {
+            color: #007bff;
+        }
+
+        .backdrop {
+            background: linear-gradient(45deg, #007bff, #ff0080);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            z-index: -1;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -73,6 +70,7 @@
     <main class="container">
         <!-- Link 1 -->
         <div class="link-box">
+            <div class="backdrop"></div>
             <a href="https://forms.gle/FQ1E3JZaAD6Vyq5Y6">
                 <h2>Art Based Therapy Workshop</h2>
                 <p>(2nd Feb)</p>
@@ -81,6 +79,7 @@
 
         <!-- Link 2 -->
         <div class="link-box">
+            <div class="backdrop"></div>
             <a href="https://forms.gle/9sSutEJ643dKNn2K7">
                 <h2>Batik Workshop</h2>
                 <p>(2nd Feb)</p>
@@ -89,6 +88,7 @@
 
         <!-- Link 3 -->
         <div class="link-box">
+            <div class="backdrop"></div>
             <a href="https://forms.gle/Q5MgkWBw5vvQWH6L8">
                 <h2>Pottery Workshop</h2>
                 <p>(2nd Feb)</p>
@@ -97,6 +97,7 @@
 
         <!-- Link 4 -->
         <div class="link-box">
+            <div class="backdrop"></div>
             <a href="https://forms.gle/gPZ9hrSPoWN37WN38">
                 <h2>Beatboxing Workshop</h2>
                 <p>(3rd Feb)</p>
@@ -105,6 +106,7 @@
 
         <!-- Link 5 -->
         <div class="link-box">
+            <div class="backdrop"></div>
             <a href="https://forms.gle/na6ELTMfsPYfDXEE7">
                 <h2>Spoken Word Poetry</h2>
                 <p>(3rd Feb)</p>
@@ -113,6 +115,7 @@
 
         <!-- Link 6 -->
         <div class="link-box">
+            <div class="backdrop"></div>
             <a href="https://forms.gle/1eDQcfsonGZxbcK57">
                 <h2>Lyrical & Poetry Evening</h2>
                 <p>(2nd Feb)</p>
@@ -121,12 +124,234 @@
 
         <!-- Link 7 -->
         <div class="link-box">
+            <div class="backdrop"></div>
             <a href="https://forms.gle/7d56oxUT5Div3uxr8">
                 <h2>Art Competition</h2>
                 <p>(3rd Feb)</p>
             </a>
         </div>
     </main>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+Feel free to adjust the colors, fonts, or any other styling elements to better match your preferences.
+
+
+
+
+User
+make it sleek and also resposnive and add hero sections and footer and menu and navigation bar , also add event details page that can has images that keep rotating 
+ChatGPT
+Certainly! Below is an improved version with a sleek design, responsive layout, a navigation bar, hero sections, and a simple footer. Additionally, an event details page has been added with a rotating image carousel.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Artistic Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #343a40;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .link-box {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .link-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .link-box a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .link-box h2 {
+            color: #007bff;
+        }
+
+        .backdrop {
+            background: linear-gradient(45deg, #007bff, #ff0080);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            z-index: -1;
+            border-radius: 8px;
+        }
+
+        .hero {
+            background: url('your-hero-image.jpg') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .event-details {
+            padding: 40px 0;
+        }
+
+        .carousel-item img {
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Artistic Landing Page</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main class="container">
+
+        <div class="hero">
+            <h2>Welcome to Artistic Events</h2>
+            <p>Discover and participate in creative workshops and competitions.</p>
+        </div>
+
+        <!-- Link 1 -->
+        <div class="link-box">
+            <div class="backdrop"></div>
+            <a href="https://forms.gle/FQ1E3JZaAD6Vyq5Y6">
+                <h2>Art Based Therapy Workshop</h2>
+                <p>(2nd Feb)</p>
+            </a>
+        </div>
+
+        <!-- Link 2 -->
+        <div class="link-box">
+            <div class="backdrop"></div>
+            <a href="https://forms.gle/9sSutEJ643dKNn2K7">
+                <h2>Batik Workshop</h2>
+                <p>(2nd Feb)</p>
+            </a>
+        </div>
+
+        <!-- Link 3 -->
+        <div class="link-box">
+            <div class="backdrop"></div>
+            <a href="https://forms.gle/Q5MgkWBw5vvQWH6L8">
+                <h2>Pottery Workshop</h2>
+                <p>(2nd Feb)</p>
+            </a>
+        </div>
+
+        <!-- Link 4 -->
+        <div class="link-box">
+            <div class="backdrop"></div>
+            <a href="https://forms.gle/gPZ9hrSPoWN37WN38">
+                <h2>Beatboxing Workshop</h2>
+                <p>(3rd Feb)</p>
+            </a>
+        </div>
+
+        <!-- Link 5 -->
+        <div class="link-box">
+            <div class="backdrop"></div>
+            <a href="https://forms.gle/na6ELTMfsPYfDXEE7">
+                <h2>Spoken Word Poetry</h2>
+                <p>(3rd Feb)</p>
+            </a>
+        </div>
+
+        <!-- Link 6 -->
+        <div class="link-box">
+            <div class="backdrop"></div>
+            <a href="https://forms.gle/1eDQcfsonGZxbcK57">
+                <h2>Lyrical & Poetry Evening</h2>
+                <p>(2nd Feb)</p>
+            </a>
+        </div>
+
+        <!-- Link 7 -->
+        <div class="link-box">
+            <div class="backdrop"></div>
+            <a href="https://forms.gle/7d56oxUT5Div3uxr8">
+                <h2>Art Competition</h2>
+                <p>(3rd Feb)</p>
+            </a>
+        </div>
+
+    </main>
+
+    <div class="event-details">
+        <div id="eventCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="event1.jpg" class="d-block w-100" alt="Event 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="event2.jpg" class="d-block w-100" alt="Event 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="event3.jpg" class="d-block w-100" alt="Event 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Your Artistic Landing Page. All rights reserved.</p>
+    </div>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
