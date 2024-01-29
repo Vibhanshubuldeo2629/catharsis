@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Landing Page</title>
+    <title>Your Artistic Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
@@ -20,11 +22,7 @@
         }
 
         main {
-            max-width: 800px;
-            margin: 20px auto;
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            padding: 20px;
         }
 
         .link-box {
@@ -34,14 +32,34 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
         }
 
         .link-box:hover {
             transform: scale(1.05);
         }
 
+        .link-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ffbf00, #ff0080);
+            transform: skew(-15deg);
+            z-index: -1;
+        }
+
         a {
             text-decoration: none;
+            color: #333;
+        }
+
+        h2, p {
+            margin: 0;
             color: #333;
         }
     </style>
@@ -49,66 +67,70 @@
 <body>
 
     <header>
-        <h1>Your Name or Brand</h1>
+        <h1>Your Artistic Landing Page</h1>
     </header>
 
-    <main>
+    <main class="container">
         <!-- Link 1 -->
         <div class="link-box">
-            <a href="page1.html">
-                <h2>Page 1</h2>
-                <p>Description of Page 1</p>
+            <a href="https://forms.gle/FQ1E3JZaAD6Vyq5Y6">
+                <h2>Art Based Therapy Workshop</h2>
+                <p>(2nd Feb)</p>
             </a>
         </div>
 
         <!-- Link 2 -->
         <div class="link-box">
-            <a href="page2.html">
-                <h2>Page 2</h2>
-                <p>Description of Page 2</p>
+            <a href="https://forms.gle/9sSutEJ643dKNn2K7">
+                <h2>Batik Workshop</h2>
+                <p>(2nd Feb)</p>
             </a>
         </div>
 
         <!-- Link 3 -->
         <div class="link-box">
-            <a href="page3.html">
-                <h2>Page 3</h2>
-                <p>Description of Page 3</p>
+            <a href="https://forms.gle/Q5MgkWBw5vvQWH6L8">
+                <h2>Pottery Workshop</h2>
+                <p>(2nd Feb)</p>
             </a>
         </div>
 
         <!-- Link 4 -->
         <div class="link-box">
-            <a href="page4.html">
-                <h2>Page 4</h2>
-                <p>Description of Page 4</p>
+            <a href="https://forms.gle/gPZ9hrSPoWN37WN38">
+                <h2>Beatboxing Workshop</h2>
+                <p>(3rd Feb)</p>
             </a>
         </div>
 
         <!-- Link 5 -->
         <div class="link-box">
-            <a href="page5.html">
-                <h2>Page 5</h2>
-                <p>Description of Page 5</p>
+            <a href="https://forms.gle/na6ELTMfsPYfDXEE7">
+                <h2>Spoken Word Poetry</h2>
+                <p>(3rd Feb)</p>
             </a>
         </div>
 
         <!-- Link 6 -->
         <div class="link-box">
-            <a href="page6.html">
-                <h2>Page 6</h2>
-                <p>Description of Page 6</p>
+            <a href="https://forms.gle/1eDQcfsonGZxbcK57">
+                <h2>Lyrical & Poetry Evening</h2>
+                <p>(2nd Feb)</p>
             </a>
         </div>
 
         <!-- Link 7 -->
         <div class="link-box">
-            <a href="page7.html">
-                <h2>Page 7</h2>
-                <p>Description of Page 7</p>
+            <a href="https://forms.gle/7d56oxUT5Div3uxr8">
+                <h2>Art Competition</h2>
+                <p>(3rd Feb)</p>
             </a>
         </div>
     </main>
 
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
